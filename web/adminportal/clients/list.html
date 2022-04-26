@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin Portal | Clients</title>
+    </head>
+    <body>
+        <a href="/clients/create">Create</a>
+        <table style="width:100%">
+            <thead>
+            <tr>
+                <th>Email</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Phone</th>
+                <th>Created at</th>
+                <td>Actions</td>
+            </tr>
+            </thead>
+            {{range .}}
+                <tr>
+                    <td>
+                        {{.Email}}
+                    </td>
+                    <td>
+                        {{.FirstName}}
+                    </td>
+                    <td>
+                        {{.LastName}}
+                    </td>
+                    <td>
+                        {{.Phone}}
+                    </td>
+                    <td>
+                        {{.CreatedAt}}
+                    </td>
+                    <td>
+                        <a href="/clients/{{.ID}}/delete">Delete</a>
+                        <a href="/clients/{{.ID}}/update">Update</a>
+                    </td>
+                </tr>
+            {{end}}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+# Mac OS X files
+.DS_Store
+
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.db
+
+# Test binary, build with `go test -c`
+*.test
+*.prof
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# VSCode
+/.vscode
+
+# Jetbrains
+.idea/
+
+*.coverprofile
+*.log
+
+/release/
+*.swp
+/bin
+resource.syso
+
+*.resource.go
+
+.build
+
+# web projects
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+
+node_modules
+dist
+coverage

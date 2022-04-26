@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin Portal | Managers</title>
+    </head>
+    <body>
+        <a href="/managers/create">Create</a>
+        <table style="width:100%">
+            <thead>
+            <tr>
+                <th>Email</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Created at</th>
+                <td>Actions</td>
+            </tr>
+            </thead>
+            {{range .}}
+                <tr>
+                    <td>
+                        {{.Email}}
+                    </td>
+                    <td>
+                        {{.FirstName}}
+                    </td>
+                    <td>
+                        {{.LastName}}
+                    </td>
+                    <td>
+                        {{.CreatedAt}}
+                    </td>
+                    <td>
+                        <a href="/managers/{{.ID}}/delete">Delete</a>
+                        <a href="/managers/{{.ID}}/update">Update</a>
+                    </td>
+                </tr>
+            {{end}}
+        </table>
+    </body>
+</html>
